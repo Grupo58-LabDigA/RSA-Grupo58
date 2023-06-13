@@ -1,0 +1,67 @@
+pgpdump -i -l -m -p PublicKey.asc
+
+Old: Public Key Packet(tag 6)(141 bytes)
+	Ver 4 - new
+	Public key creation time - Mon Jun 12 19:38:36 CEST 2023
+	Pub alg - RSA Encrypt or Sign(pub 1)
+	RSA n(1024 bits) - ea 58 3a eb be 8b 7d 84 1a fb 4f fb 54 e3 f8 74 d0 ac 97 ac d1 8c 2e ab 19 50 60 d3 5c 60 17 f4 9b 0f f3 ec 2d f2 13 0a e8 49 cb 96 74 f3 43 bb c6 dd 7f 0d 11 31 b9 40 aa fc 8a df 2b 9b 31 c4 48 5d cc 7c 4e e7 45 76 31 0c af e0 87 8f a8 0e b1 78 7d ee 92 7f 58 c7 7f 58 e0 0d 6f 35 fc bb 8d 7e 9b ae 37 5f 8e bb 4c 6b 87 8c 6f 0b 68 94 1b 9e 70 88 c4 4f 64 79 08 c7 07 28 f4 8a 13 99 
+	RSA e(17 bits) - 01 00 01 
+Old: User ID Packet(tag 13)(55 bytes)
+	User ID - Luiz Eduardo Santos (Projeto LabDigA) <email@email.com>
+Old: Signature Packet(tag 2)(206 bytes)
+	Ver 4 - new
+	Sig type - Positive certification of a User ID and Public Key packet(0x13).
+	Pub alg - RSA Encrypt or Sign(pub 1)
+	Hash alg - SHA256(hash 8)
+	Hashed Sub: unknown(sub 33)(21 bytes)
+	Hashed Sub: signature creation time(sub 2)(4 bytes)
+		Time - Mon Jun 12 19:38:36 CEST 2023
+	Hashed Sub: key flags(sub 27)(1 bytes)
+		Flag - This key may be used to certify other keys
+		Flag - This key may be used to sign data
+	Hashed Sub: preferred symmetric algorithms(sub 11)(4 bytes)
+		Sym alg - AES with 256-bit key(sym 9)
+		Sym alg - AES with 192-bit key(sym 8)
+		Sym alg - AES with 128-bit key(sym 7)
+		Sym alg - Triple-DES(sym 2)
+	Hashed Sub: preferred hash algorithms(sub 21)(5 bytes)
+		Hash alg - SHA512(hash 10)
+		Hash alg - SHA384(hash 9)
+		Hash alg - SHA256(hash 8)
+		Hash alg - SHA224(hash 11)
+		Hash alg - SHA1(hash 2)
+	Hashed Sub: preferred compression algorithms(sub 22)(3 bytes)
+		Comp alg - ZLIB <RFC1950>(comp 2)
+		Comp alg - BZip2(comp 3)
+		Comp alg - ZIP <RFC1951>(comp 1)
+	Hashed Sub: features(sub 30)(1 bytes)
+		Flag - Modification detection (packets 18 and 19)
+	Hashed Sub: key server preferences(sub 23)(1 bytes)
+		Flag - No-modify
+	Sub: issuer key ID(sub 16)(8 bytes)
+		Key ID - 0x5194FE07F3780F52
+	Hash left 2 bytes - b7 8c 
+	RSA m^d mod n(1024 bits) - a5 20 38 fe 18 aa 5f 12 84 6a 25 9b 18 4f ab 3b c8 93 97 de bf 2d fb 37 25 dd 1f ea 0d 66 f9 c8 25 2d ce 16 a3 1c 16 15 14 06 88 76 af dc 30 5a a6 1a 31 b6 1a 16 3d 1d 87 bd 15 a8 0d 70 cc dc 8d f8 b6 49 3c f7 5f ee 3e 7d af 1e 1e 46 c4 84 63 92 ca 05 58 2e 37 b6 7d b3 bd 5e a0 da 25 bf bd 48 58 d8 70 b2 62 1f 75 cc 29 70 65 49 95 6f 56 e4 a8 bd 69 05 ba 90 53 4b 56 b9 cf dc 68 6b 
+		-> PKCS-1
+Old: Public Subkey Packet(tag 14)(141 bytes)
+	Ver 4 - new
+	Public key creation time - Mon Jun 12 19:38:36 CEST 2023
+	Pub alg - RSA Encrypt or Sign(pub 1)
+	RSA n(1024 bits) - d8 e5 90 62 4b c2 b1 9a 11 cd 0a d4 d5 c3 8d f2 08 2d a3 44 b4 af c8 d3 39 7d 45 19 8b ad ed fc 9f b8 88 a5 c0 91 78 41 54 a2 ff 21 04 fe c7 81 7c 79 26 b3 7e b5 2c 9d 12 6f 6d d3 b6 42 3e 7f 90 c3 45 68 4b 0a 34 ea 7c ad 2c 28 c3 74 a8 cd 35 eb 6c 36 d8 b8 17 2a 11 19 ad 6c e5 8b 27 f8 58 5c 59 cd 06 97 47 04 38 65 c3 cc 67 d9 07 e1 fb 1c 94 49 b0 17 ac cf 80 ce ad 3d ec 3a 86 a1 
+	RSA e(17 bits) - 01 00 01 
+Old: Signature Packet(tag 2)(182 bytes)
+	Ver 4 - new
+	Sig type - Subkey Binding Signature(0x18).
+	Pub alg - RSA Encrypt or Sign(pub 1)
+	Hash alg - SHA256(hash 8)
+	Hashed Sub: unknown(sub 33)(21 bytes)
+	Hashed Sub: signature creation time(sub 2)(4 bytes)
+		Time - Mon Jun 12 19:38:36 CEST 2023
+	Hashed Sub: key flags(sub 27)(1 bytes)
+		Flag - This key may be used to encrypt communications
+		Flag - This key may be used to encrypt storage
+	Sub: issuer key ID(sub 16)(8 bytes)
+		Key ID - 0x5194FE07F3780F52
+	Hash left 2 bytes - 7e 9c 
+	RSA m^d mod n(1024 bits) - bf de 0d cf ad 11 d4 9c ba 82 56 c9 6d 10 61 c6 13 2e 62 bd 9b ec 06 62 87 a9 c2 ba 13 b8 3c 36 4f 46 ea cb 41 cc 0c 64 f1 9a 43 64 08 10 8e 14 03 7f 65 3c 15 6a 97 8e 74 26 35 3d f9 48 15 21 1f db ae 53 84 fd 25 09 40 54 7c e3 c9 b8 97 d1 a5 e9 8e c0 88 65 83 5d b2 9e 0d 9f 95 af b7 06 86 12 ae 8d a6 22 f6 7c 7d a5 06 bc 31 76 07 9e a1 67 89 e5 ac 73 61 78 c6 d2 c8 4b 7c 12 72 81 
+		-> PKCS-1

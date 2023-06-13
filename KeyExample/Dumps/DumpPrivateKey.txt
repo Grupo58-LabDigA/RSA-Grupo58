@@ -1,0 +1,77 @@
+pgpdump -i -l -m -p PrivateKey.asc
+
+Old: Secret Key Packet(tag 5)(472 bytes)
+	Ver 4 - new
+	Public key creation time - Mon Jun 12 19:38:36 CEST 2023
+	Pub alg - RSA Encrypt or Sign(pub 1)
+	RSA n(1024 bits) - ea 58 3a eb be 8b 7d 84 1a fb 4f fb 54 e3 f8 74 d0 ac 97 ac d1 8c 2e ab 19 50 60 d3 5c 60 17 f4 9b 0f f3 ec 2d f2 13 0a e8 49 cb 96 74 f3 43 bb c6 dd 7f 0d 11 31 b9 40 aa fc 8a df 2b 9b 31 c4 48 5d cc 7c 4e e7 45 76 31 0c af e0 87 8f a8 0e b1 78 7d ee 92 7f 58 c7 7f 58 e0 0d 6f 35 fc bb 8d 7e 9b ae 37 5f 8e bb 4c 6b 87 8c 6f 0b 68 94 1b 9e 70 88 c4 4f 64 79 08 c7 07 28 f4 8a 13 99 
+	RSA e(17 bits) - 01 00 01 
+	RSA d(1019 bits) - 07 6b d3 5e 84 aa 7f 5c a8 0b c0 de 3f f3 8c 8f a0 78 72 c0 dc e2 f5 ab 0d 47 c1 1a 8d c0 97 9e f3 56 7c e8 ee bc 8d 88 a9 24 b0 74 90 e5 64 f0 a4 f7 d3 39 45 f6 89 e6 bd 1e 21 c4 b6 fe b8 c3 99 14 54 93 c1 53 99 7c 1f 8b 8f 98 23 5e f1 0f ed 50 f5 b0 17 0c 2d 9a 74 aa 29 69 37 52 df 11 59 d0 8b 3c 67 95 de 2d ab fb 72 77 5b 53 fd f6 45 2b be dc 0b 75 15 a7 fb 1a 1d da 76 ee 35 1d 
+	RSA p(512 bits) - ec a2 02 5f f9 1e eb 30 81 f6 f7 a2 c6 f8 c9 99 18 23 9b 4a 5c ec a0 15 cb d4 b5 70 30 b4 90 03 6f eb bb 54 76 c8 16 8c a7 f0 98 7f 47 ed 37 c5 59 ea 43 4d 8a 10 e8 3c 34 4a 24 a2 43 e8 11 1d 
+	RSA q(512 bits) - fd 86 47 27 b9 d3 7a 2e 88 22 a4 d1 f0 85 61 dc ce 30 b1 36 ad 6a 19 be 28 40 58 9e 29 2f b0 4e b5 3e 75 5f 5b 1a 8e 7e 3e 89 d3 00 e2 69 29 42 e4 c6 26 a8 77 11 e4 19 75 72 26 14 93 f4 1f ad 
+	RSA u(512 bits) - ba ee 46 72 7b ed 26 6e 7d 61 23 8b 0f 26 c9 68 1b 75 00 1a 35 ca 3e 50 de 95 db ff 35 e9 89 0b fd ee 3c 3f 2f 03 95 4b e6 00 c6 f6 fc a6 74 9c 94 ae cf ea 64 9d 31 17 0c 61 9e df ec 3b 06 50 
+	Checksum - a2 bf 
+Old: User ID Packet(tag 13)(55 bytes)
+	User ID - Luiz Eduardo Santos (Projeto LabDigA) <email@email.com>
+Old: Signature Packet(tag 2)(206 bytes)
+	Ver 4 - new
+	Sig type - Positive certification of a User ID and Public Key packet(0x13).
+	Pub alg - RSA Encrypt or Sign(pub 1)
+	Hash alg - SHA256(hash 8)
+	Hashed Sub: unknown(sub 33)(21 bytes)
+	Hashed Sub: signature creation time(sub 2)(4 bytes)
+		Time - Mon Jun 12 19:38:36 CEST 2023
+	Hashed Sub: key flags(sub 27)(1 bytes)
+		Flag - This key may be used to certify other keys
+		Flag - This key may be used to sign data
+	Hashed Sub: preferred symmetric algorithms(sub 11)(4 bytes)
+		Sym alg - AES with 256-bit key(sym 9)
+		Sym alg - AES with 192-bit key(sym 8)
+		Sym alg - AES with 128-bit key(sym 7)
+		Sym alg - Triple-DES(sym 2)
+	Hashed Sub: preferred hash algorithms(sub 21)(5 bytes)
+		Hash alg - SHA512(hash 10)
+		Hash alg - SHA384(hash 9)
+		Hash alg - SHA256(hash 8)
+		Hash alg - SHA224(hash 11)
+		Hash alg - SHA1(hash 2)
+	Hashed Sub: preferred compression algorithms(sub 22)(3 bytes)
+		Comp alg - ZLIB <RFC1950>(comp 2)
+		Comp alg - BZip2(comp 3)
+		Comp alg - ZIP <RFC1951>(comp 1)
+	Hashed Sub: features(sub 30)(1 bytes)
+		Flag - Modification detection (packets 18 and 19)
+	Hashed Sub: key server preferences(sub 23)(1 bytes)
+		Flag - No-modify
+	Sub: issuer key ID(sub 16)(8 bytes)
+		Key ID - 0x5194FE07F3780F52
+	Hash left 2 bytes - b7 8c 
+	RSA m^d mod n(1024 bits) - a5 20 38 fe 18 aa 5f 12 84 6a 25 9b 18 4f ab 3b c8 93 97 de bf 2d fb 37 25 dd 1f ea 0d 66 f9 c8 25 2d ce 16 a3 1c 16 15 14 06 88 76 af dc 30 5a a6 1a 31 b6 1a 16 3d 1d 87 bd 15 a8 0d 70 cc dc 8d f8 b6 49 3c f7 5f ee 3e 7d af 1e 1e 46 c4 84 63 92 ca 05 58 2e 37 b6 7d b3 bd 5e a0 da 25 bf bd 48 58 d8 70 b2 62 1f 75 cc 29 70 65 49 95 6f 56 e4 a8 bd 69 05 ba 90 53 4b 56 b9 cf dc 68 6b 
+		-> PKCS-1
+Old: Secret Subkey Packet(tag 7)(472 bytes)
+	Ver 4 - new
+	Public key creation time - Mon Jun 12 19:38:36 CEST 2023
+	Pub alg - RSA Encrypt or Sign(pub 1)
+	RSA n(1024 bits) - d8 e5 90 62 4b c2 b1 9a 11 cd 0a d4 d5 c3 8d f2 08 2d a3 44 b4 af c8 d3 39 7d 45 19 8b ad ed fc 9f b8 88 a5 c0 91 78 41 54 a2 ff 21 04 fe c7 81 7c 79 26 b3 7e b5 2c 9d 12 6f 6d d3 b6 42 3e 7f 90 c3 45 68 4b 0a 34 ea 7c ad 2c 28 c3 74 a8 cd 35 eb 6c 36 d8 b8 17 2a 11 19 ad 6c e5 8b 27 f8 58 5c 59 cd 06 97 47 04 38 65 c3 cc 67 d9 07 e1 fb 1c 94 49 b0 17 ac cf 80 ce ad 3d ec 3a 86 a1 
+	RSA e(17 bits) - 01 00 01 
+	RSA d(1017 bits) - 01 a5 a4 a0 b5 20 92 5c 05 7c 95 73 78 f8 16 30 db 52 60 10 af d5 3c 8f 80 ba 97 21 68 32 76 ec 84 83 50 8e 54 55 b1 20 6b 35 c8 52 db 88 85 17 fc f6 52 8e 94 62 13 27 a7 87 2f 17 52 25 53 4c d3 1b e4 18 fb fc 82 72 f1 21 60 b2 cf 14 2f d5 b3 cf c5 6c 43 37 ad 5d 78 ad 65 88 57 0f 17 18 56 bc 0e 12 30 64 e5 ab 3e 23 cf ba 3f 45 60 57 5f b3 da 2b 66 04 80 3a 29 89 84 51 4a b5 be 9d 
+	RSA p(512 bits) - e6 b9 7e f7 29 4a 86 b2 ad 60 40 37 26 8e 07 0e df 96 3e dd ae 15 4b 1d ed 73 80 c3 fb 61 9c c1 c8 08 14 e8 5c 9c 2c e0 96 10 77 3f 85 9b 10 1b 9b e8 d6 61 4c 72 54 6e df 02 07 f4 83 45 a1 e7 
+	RSA q(512 bits) - f0 a8 46 97 7f 49 7c c6 57 f7 72 9e e8 b1 01 d2 68 c7 6c c6 0f bf 21 e0 38 ce b4 41 0b 60 81 63 eb 2c ee 85 16 d1 67 3a 31 d2 b5 a1 1e 1b 30 24 ff c0 11 48 7c 63 8c 29 8a 79 37 4d ae b9 92 37 
+	RSA u(511 bits) - 6f 98 02 ee 1f 2e 20 a2 94 20 d1 6e bc 26 32 e9 29 05 82 a7 4a f2 c9 29 7d 2c dd ac dd f8 9b b6 4f d8 0e b5 e3 7b 2a c2 e6 63 77 3a 0b 79 f0 a7 82 5c 6e 0b df d1 0a 16 59 35 0f cd ae 12 c6 cf 
+	Checksum - 98 df 
+Old: Signature Packet(tag 2)(182 bytes)
+	Ver 4 - new
+	Sig type - Subkey Binding Signature(0x18).
+	Pub alg - RSA Encrypt or Sign(pub 1)
+	Hash alg - SHA256(hash 8)
+	Hashed Sub: unknown(sub 33)(21 bytes)
+	Hashed Sub: signature creation time(sub 2)(4 bytes)
+		Time - Mon Jun 12 19:38:36 CEST 2023
+	Hashed Sub: key flags(sub 27)(1 bytes)
+		Flag - This key may be used to encrypt communications
+		Flag - This key may be used to encrypt storage
+	Sub: issuer key ID(sub 16)(8 bytes)
+		Key ID - 0x5194FE07F3780F52
+	Hash left 2 bytes - 7e 9c 
+	RSA m^d mod n(1024 bits) - bf de 0d cf ad 11 d4 9c ba 82 56 c9 6d 10 61 c6 13 2e 62 bd 9b ec 06 62 87 a9 c2 ba 13 b8 3c 36 4f 46 ea cb 41 cc 0c 64 f1 9a 43 64 08 10 8e 14 03 7f 65 3c 15 6a 97 8e 74 26 35 3d f9 48 15 21 1f db ae 53 84 fd 25 09 40 54 7c e3 c9 b8 97 d1 a5 e9 8e c0 88 65 83 5d b2 9e 0d 9f 95 af b7 06 86 12 ae 8d a6 22 f6 7c 7d a5 06 bc 31 76 07 9e a1 67 89 e5 ac 73 61 78 c6 d2 c8 4b 7c 12 72 81 
+		-> PKCS-1

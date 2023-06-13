@@ -1,0 +1,12 @@
+pgpdump -i -l -m unencrypted.txt.asc
+
+Old: Public-Key Encrypted Session Key Packet(tag 1)(140 bytes)
+	New version(3)
+	Key ID - 0x8E07B8C772D4488F
+	Pub alg - RSA Encrypt or Sign(pub 1)
+	RSA m^e mod n(1021 bits) - 13 48 95 a3 fb e2 45 5c f6 67 45 f9 d9 6c 49 50 c8 6f 80 fc dd 16 24 e4 62 e2 e3 89 94 d5 59 99 b1 50 a9 46 1c d2 3c 9e 9b 84 3d 9b 04 f3 ac 78 98 95 72 a5 c7 8d 8a 54 f3 9f eb a7 0e eb ca 3b c3 13 d0 6c 14 b0 4d 8b 47 86 c5 b5 87 73 ff bd d2 ed 77 8d 2e f4 9e 6f e6 1c 8a 1f 85 9f 5d 68 83 39 e0 c5 3b 95 69 69 08 2d 58 c2 86 e4 75 34 99 3c 4d 74 fd 83 de 41 2d 9d 0e 11 7b c2 ac b5 
+		-> m = sym alg(1 byte) + checksum(2 bytes) + PKCS-1 block type 02
+New: Symmetrically Encrypted and MDC Packet(tag 18)(90 bytes)
+	Ver 1
+	Encrypted data [sym alg is specified in pub-key encrypted session key]
+		(plain text + MDC SHA1(20 bytes))
