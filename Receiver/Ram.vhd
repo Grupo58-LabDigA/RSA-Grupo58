@@ -4,35 +4,40 @@
 --! @author Bruno Albertini (balbertini@usp.br)
 --! @date   20190606
 --------------------------------------------------------------------------------
+library IEEE;
+use IEEE.numeric_bit.all;
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.std_logic_arith.all;
+
 
 entity ram is
   generic(
-    address_size : natural := 6;
+    address_size : natural := 256;
     word_size    : natural := 4
   );
   port(
-    ck, wr, reset : in  std_logic;
-    --addr   : in  std_logic_vector(address_size-1 downto 0);
-    data_i   : in  std_logic_vector(7 downto 0);
-    data_o  : out std_logic_vector(address_size*8-1 downto 0)
+    ck, wr, reset : in  bit;
+    --addr   : in  bit_vector(address_size-1 downto 0);
+    data_i   : in  bit_vector(7 downto 0);
+    data_o  : out bit_vector(1023 downto 0)
   );
 end ram;
 
 architecture vendorfree of ram is
   signal counter : integer := 0;
-  constant depth : natural := 2**address_size;
-  type mem_type is array (0 to depth-1) of std_logic_vector(word_size-1 downto 0);
-  signal convertido : std_logic_vector(3 downto 0);
+  --constant depth : natural := 2**address_size;
+  type mem_type is array (0 to 255) of bit_vector(3 downto 0);
+  signal convertido : bit_vector(3 downto 0);
   signal mem : mem_type;
   
   component decoder is
 
   port(
-	ascii: in std_logic_vector(7 downto 0);
-	binary: out std_logic_vector(3 downto 0)
+	ascii: in bit_vector(7 downto 0);
+	binary: out bit_vector(3 downto 0)
 	);
 	end component;
 
@@ -40,7 +45,7 @@ begin
 
   decodificador : decoder
   port map(
-	ascii => data_in,
+	ascii => data_i,
 	binary => convertido
   );
   
@@ -57,6 +62,9 @@ begin
 	end if;
   end process;
   
-  g1: for i in 1 to adrress_size generate 
-	data_o(i*word_size-1 downto i*word_size-3) <= mem(i-1);
+  g1: for i in 1 to 256 generate 
+	data_o(i*4-1 downto i*4-4) <= mem(i-1);
+  
+  end generate g1;
+	
 end vendorfree;
