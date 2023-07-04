@@ -15,23 +15,25 @@ use ieee.std_logic_arith.all;
 
 entity ram is
   generic(
-    address_size : natural := 256;
+    address_size : natural := 32;
     word_size    : natural := 4
   );
   port(
     ck, wr, reset : in  bit;
     --addr   : in  bit_vector(address_size-1 downto 0);
     data_i   : in  bit_vector(7 downto 0);
-    data_o  : out bit_vector(1023 downto 0)
+    data_o  : out bit_vector(word_size*address_size - 1 downto 0)
   );
 end ram;
 
 architecture vendorfree of ram is
   signal counter : integer := 0;
   --constant depth : natural := 2**address_size;
-  type mem_type is array (0 to 255) of bit_vector(3 downto 0);
+  type mem_type is array (0 to address_size-1) of bit_vector(3 downto 0);
   signal convertido : bit_vector(3 downto 0);
   signal mem : mem_type;
+  
+  signal intermediario: bit_vector(word_size*address_size-1 downto 0) := (others=>'0');
   
   component decoder is
 
@@ -42,12 +44,14 @@ architecture vendorfree of ram is
 	end component;
 
 begin
+ 
 
   decodificador : decoder
   port map(
 	ascii => data_i,
 	binary => convertido
   );
+  
   
   wrt: process(ck)
   begin
@@ -62,9 +66,12 @@ begin
 	end if;
   end process;
   
-  g1: for i in 1 to 256 generate 
-	data_o(i*4-1 downto i*4-4) <= mem(i-1);
+  
+  g1: for i in 1 to address_size generate 
+	intermediario(i*4-1 downto i*4-4) <= mem(i-1);
   
   end generate g1;
+  
+  data_o <= intermediario;
 	
 end vendorfree;
