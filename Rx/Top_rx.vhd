@@ -3,11 +3,14 @@ use IEEE.numeric_bit.all;
 
 
 entity top_rx is
+	generic (
+		n : positive := 128
+	);
   port(
 	clock : in bit;
 	data_in : in bit;
 	reset : in bit;
-   	data_out : out bit_vector(1023 downto 0)
+   	data_out : out bit_vector(n-1 downto 0)
   );
 end entity;
 
@@ -29,24 +32,24 @@ architecture arch_top of top_rx is
 
 	Component ram is
 	generic(
-		address_size : natural := 256;
+		address_size : natural := 32;
 		word_size    : natural := 4
 	);
 	port( 
 		ck, wr, reset  : in  bit;
 		data_i  : in  bit_vector(7 downto 0);
-		data_o : out bit_vector(1023 downto 0)
+		data_o : out bit_vector(n-1 downto 0)
+
+		
 	);
 	end component;
 	
 	
 
   -- Instanciando o componente
-constant letras : integer := 1;
-signal disp1, disp2, disp3, disp4, disp5, disp6 : bit_vector(7 downto 0);
 signal wr 	       : bit;
 signal data_rx 	   : bit_vector(7 downto 0);
-signal armazenador : bit_vector(1023 downto 0);
+signal armazenador : bit_vector(n-1 downto 0);
 
 begin
     
@@ -60,6 +63,7 @@ begin
     );
   
   memoria : ram
+	generic map (32, 4)
 	port map(
 		ck => clock,
 		wr => wr,
@@ -67,6 +71,8 @@ begin
 		data_i => data_rx,
 		data_o => armazenador
 	);
+	
+	
   
   data_out <= armazenador;
 end architecture;
